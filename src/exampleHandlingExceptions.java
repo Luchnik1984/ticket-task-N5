@@ -3,9 +3,9 @@ import java.io.FileNotFoundException;
 public class exampleHandlingExceptions {
     public static void main(String[] args) {
 
-        try {
-            processUnchecked();
+        processUnchecked();
 
+        try {
             processChecked();
 
         } catch (FileNotFoundException e) {
@@ -13,7 +13,8 @@ public class exampleHandlingExceptions {
             System.out.println("Программа завершена с ошибкой");
             return;
 
-        } finally {
+        }
+        finally {
             System.out.println("Блок finally в main выполнен");
         }
 
@@ -21,7 +22,7 @@ public class exampleHandlingExceptions {
     }
 
     static void processChecked() throws FileNotFoundException {
-        throw new FileNotFoundException("файл не найден");
+     throw new FileNotFoundException("файл не найден");
     }
 
     static void processUnchecked() {
