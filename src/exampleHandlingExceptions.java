@@ -10,6 +10,8 @@ public class exampleHandlingExceptions {
 
         } catch (FileNotFoundException e) {
             System.out.println("Поймали в main (checked): " + e.getMessage());
+            System.out.println("Программа завершена с ошибкой");
+            return;
 
         } finally {
             System.out.println("Блок finally в main выполнен");
@@ -31,7 +33,5 @@ public class exampleHandlingExceptions {
 
             System.out.println("Обработали unchecked: " + e.getMessage());
         }
-
-
     }
 }
